@@ -1,4 +1,4 @@
-package com.dqv5.cas.client.security;
+package com.dqv5.cas.server.custom;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;

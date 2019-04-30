@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.dqv5.cas.client.config.SpringConfig
+  com.dqv5.cas.server.config.SpringConfig

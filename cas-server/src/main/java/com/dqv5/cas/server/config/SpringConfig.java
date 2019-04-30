@@ -1,4 +1,4 @@
-package com.dqv5.cas.client.config;
+package com.dqv5.cas.server.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -8,6 +8,6 @@ import org.springframework.context.annotation.Configuration;
  * @date 2019-04-28
  */
 @Configuration
-@ComponentScan("com.dqv5.cas")
+@ComponentScan("com.dqv5.cas.server")
 public class SpringConfig {
 }

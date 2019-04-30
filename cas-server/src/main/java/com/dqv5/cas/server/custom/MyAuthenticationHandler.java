@@ -1,4 +1,4 @@
-package com.dqv5.cas.client.custom;
+package com.dqv5.cas.server.custom;
 
 import org.apereo.cas.authentication.AuthenticationHandlerExecutionResult;
 import org.apereo.cas.authentication.Credential;
@@ -9,7 +9,6 @@ import org.apereo.cas.authentication.principal.PrincipalFactory;
 import org.apereo.cas.services.ServicesManager;
 
 import javax.security.auth.login.AccountLockedException;
-import javax.security.auth.login.CredentialExpiredException;
 import java.security.GeneralSecurityException;
 import java.util.HashMap;
 import java.util.Map;
