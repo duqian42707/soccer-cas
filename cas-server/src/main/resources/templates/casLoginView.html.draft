@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <title>CAS 自定义登录页面</title>
+
+</head>
+<body class="login">
+<main>
+    <form action="./login">
+        <input placeholder="用户名" type="text" name="account"/>
+        <input placeholder="密码" type="password" name="password"/>
+        <button type="submit">提交</button>
+        <button type="button">重置</button>
+    </form>
+</main>
+</body>
+</html>
