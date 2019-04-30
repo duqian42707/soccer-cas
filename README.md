@@ -7,8 +7,8 @@
 |项目名|功能说明|访问路径|
 |-----|----|----|
 |cas-server|cas服务端|http://localhost:8080/cas|
-|cas-client-springboot|cas客户端(springboot项目)|http://localhost:8081/|
-|cas-client-webapp|cas客户端(传统web项目)|http://localhost:8082/|
+|cas-client-webapp|cas客户端(传统web项目)|http://localhost:8081/|
+|cas-client-springboot|cas客户端(springboot项目)|http://localhost:8082/|
 
 
 #### 软件架构
