@@ -149,10 +149,13 @@ public class CasValidateController {
     }
 
     @GetMapping("/app/logout")
-    public String logout(HttpSession session) {
+    public String logout(HttpSession session, String service) throws UnsupportedEncodingException {
         // 清除 session信息
         session.removeAttribute(Constant.BROWER_TO_CAS_AUTH_SERVICE);
         session.removeAttribute(Constant.CAS_AUTH_SUCCESS_USER_INFO);
-        return "redirect:" + casServerProperties.getCasServerName() + "/logout";
+        if (StringUtils.isEmpty(service)) {
+            return "redirect:" + casServerProperties.getCasServerName() + "/logout";
+        }
+        return "redirect:" + casServerProperties.getCasServerName() + "/logout?service=" + URLEncoder.encode(service, "UTF-8");
     }
 }

@@ -6,9 +6,17 @@
             integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
             crossorigin="anonymous"></script>
 </head>
+<body>
+<h1>
+    hello world! <a href="javascript:void(0)" onclick="logout()">logout</a>
+</h1>
+</body>
 <script>
     $.ajax({
         url: 'http://localhost:8090/cas-proxy/app/validate?callback=' + window.location.href,
+        xhrFields: {
+            withCredentials: true,
+        },
         success: function (data) {
             console.log(data);
             if (data.errcode === 2001) {
@@ -16,6 +24,10 @@
             }
         }
     })
+
+    function logout() {
+        window.location.href = "http://localhost:8090/cas-proxy/app/logout?service=" + window.location.href;
+    }
 
 </script>
 </html>
