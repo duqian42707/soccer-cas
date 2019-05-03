@@ -4,6 +4,7 @@ import org.jasig.cas.client.authentication.AuthenticationFilter;
 import org.jasig.cas.client.session.SingleSignOutFilter;
 import org.jasig.cas.client.session.SingleSignOutHttpSessionListener;
 import org.jasig.cas.client.util.HttpServletRequestWrapperFilter;
+import org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter;
 import org.jasig.cas.client.validation.Cas30ProxyReceivingTicketValidationFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
@@ -58,13 +59,14 @@ public class AppConfig {
 
     @Bean
     public FilterRegistrationBean validationFilterRegistrationBean() {
-        FilterRegistrationBean<Cas30ProxyReceivingTicketValidationFilter> registrationBean = new FilterRegistrationBean<>();
+        FilterRegistrationBean registrationBean = new FilterRegistrationBean<>();
         Map<String, String> initParameters = new HashMap<>(2);
         initParameters.put("casServerUrlPrefix", autoconfig.getCasServerUrlPrefix());
         initParameters.put("serverName", autoconfig.getServerName());
         initParameters.put("redirectAfterValidation", "true");
         initParameters.put("useSession", "true");
         initParameters.put("authn_method", "mfa-duo");
+//        registrationBean.setFilter(new Cas20ProxyReceivingTicketValidationFilter());
         registrationBean.setFilter(new Cas30ProxyReceivingTicketValidationFilter());
         registrationBean.addUrlPatterns(autoconfig.getValidateFilters());
         registrationBean.setInitParameters(initParameters);
