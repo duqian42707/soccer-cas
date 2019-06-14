@@ -1,6 +1,6 @@
 {
   "@class": "org.apereo.cas.services.RegexRegisteredService",
-  "serviceId": "^https://www.apereo.org",
+  "serviceId": "^http://localhost:8080/cas-management/manage.html",
   "name": "Apereo",
   "theme": "apereo",
   "id": 10000002,

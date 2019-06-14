@@ -13,6 +13,7 @@
         <module>cas-client-springboot</module>
         <module>cas-client-webapp</module>
         <module>cas-proxy</module>
+        <module>cas-management</module>
     </modules>
 
 </project>
