@@ -10,7 +10,7 @@
 
     <properties>
         <cas.version>3.5.3</cas.version>
-        <spring.version>3.1.1.RELEASE</spring.version>
+        <spring.version>5.2.2.RELEASE</spring.version>
         <hibernate.version>3.4.0.GA</hibernate.version>
         <com.alibaba.druid.version>1.0.9</com.alibaba.druid.version>
     </properties>
