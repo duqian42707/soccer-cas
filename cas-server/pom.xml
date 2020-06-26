@@ -94,6 +94,11 @@
             <artifactId>cas-server-core-authentication-attributes</artifactId>
             <version>${cas.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apereo.cas</groupId>
+            <artifactId>cas-server-support-pac4j-webflow</artifactId>
+            <version>${cas.version}</version>
+        </dependency>
         <!-- cas 相关依赖 end -->
 
         <dependency>
