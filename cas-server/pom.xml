@@ -34,7 +34,7 @@
         <!-- cas 相关依赖 -->
         <dependency>
             <groupId>org.apereo.cas</groupId>
-            <artifactId>cas-server-webapp-tomcat</artifactId>
+            <artifactId>cas-server-webapp${app.server}</artifactId>
             <version>${cas.version}</version>
             <type>war</type>
             <scope>runtime</scope>
@@ -127,13 +127,6 @@
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-            <scope>true</scope>
-        </dependency>
-
     </dependencies>
 
     <build>
@@ -195,7 +188,7 @@
     </build>
 
     <properties>
-        <cas.version>5.3.9</cas.version>
+        <cas.version>5.3.16</cas.version>
         <springboot.version>1.5.18.RELEASE</springboot.version>
         <!-- app.server could be -jetty, -undertow, -tomcat, or blank if you plan to provide appserver -->
         <app.server>-tomcat</app.server>
