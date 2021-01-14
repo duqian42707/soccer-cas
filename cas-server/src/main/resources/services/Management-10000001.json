@@ -1,0 +1,8 @@
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId": "^(http://localhost:8080/cas-management)*",
+  "name": "Service Management",
+  "id": 10000001,
+  "description": "The service management application.",
+  "evaluationOrder": 10000
+}

@@ -12,17 +12,42 @@
     <packaging>war</packaging>
     <version>1.0</version>
 
+    <properties>
+        <cas-mgmt.version>5.3.6</cas-mgmt.version>
+        <cas.version>5.3.16</cas.version>
+        <springboot.version>1.5.14.RELEASE</springboot.version>
+        <mainClassName>org.springframework.boot.loader.WarLauncher</mainClassName>
+        <isExecutable>false</isExecutable>
+        <manifestFileToUse>
+            ${project.build.directory}/war/work/org.apereo.cas/cas-management-webapp/META-INF/MANIFEST.MF
+        </manifestFileToUse>
+
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!--  CAS Management  -->
+        <dependency>
+            <groupId>org.apereo.cas</groupId>
+            <artifactId>cas-management-webapp</artifactId>
+            <version>${cas-mgmt.version}</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
-<!--            <plugin>-->
-<!--                <groupId>com.rimerosolutions.maven.plugins</groupId>-->
-<!--                <artifactId>wrapper-maven-plugin</artifactId>-->
-<!--                <version>0.0.4</version>-->
-<!--                <configuration>-->
-<!--                    <verifyDownload>true</verifyDownload>-->
-<!--                    <checksumAlgorithm>MD5</checksumAlgorithm>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <plugin>
+                <groupId>com.rimerosolutions.maven.plugins</groupId>
+                <artifactId>wrapper-maven-plugin</artifactId>
+                <version>0.0.4</version>
+                <configuration>
+                    <!--                    <verifyDownload>true</verifyDownload>-->
+                    <!--                    <checksumAlgorithm>MD5</checksumAlgorithm>-->
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -69,48 +94,6 @@
         </plugins>
         <finalName>cas-management</finalName>
     </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.apereo.cas</groupId>
-            <artifactId>cas-management-webapp</artifactId>
-            <version>${cas-mgmt.version}</version>
-            <type>war</type>
-        </dependency>
-        <dependency>
-            <groupId>org.apereo.cas</groupId>
-            <artifactId>cas-server-support-jdbc-drivers</artifactId>
-            <version>${cas.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apereo.cas</groupId>
-            <artifactId>cas-server-support-jpa-service-registry</artifactId>
-            <version>${cas.version}</version>
-        </dependency>
-        <!-- cas 结束-->
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.16</version>
-        </dependency>
-
-    </dependencies>
-
-    <properties>
-        <cas-mgmt.version>5.3.6</cas-mgmt.version>
-        <cas.version>5.3.9</cas.version>
-        <springboot.version>1.5.14.RELEASE</springboot.version>
-        <mainClassName>org.springframework.boot.loader.WarLauncher</mainClassName>
-        <isExecutable>false</isExecutable>
-        <manifestFileToUse>
-            ${project.build.directory}/war/work/org.apereo.cas/cas-management-webapp/META-INF/MANIFEST.MF
-        </manifestFileToUse>
-
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <repositories>
         <repository>
