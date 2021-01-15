@@ -14,7 +14,7 @@
 
     <properties>
         <cas-mgmt.version>5.3.6</cas-mgmt.version>
-        <cas.version>5.3.16</cas.version>
+        <cas.version>5.3.5</cas.version>
         <springboot.version>1.5.14.RELEASE</springboot.version>
         <mainClassName>org.springframework.boot.loader.WarLauncher</mainClassName>
         <isExecutable>false</isExecutable>
@@ -34,6 +34,17 @@
             <artifactId>cas-management-webapp</artifactId>
             <version>${cas-mgmt.version}</version>
             <type>war</type>
+        </dependency>
+        <!--  引入依赖后jar包会冲突，未解决   -->
+        <dependency>
+            <groupId>org.apereo.cas</groupId>
+            <artifactId>cas-server-support-jpa-service-registry</artifactId>
+            <version>${cas.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apereo.cas</groupId>
+            <artifactId>cas-server-support-jdbc-drivers</artifactId>
+            <version>${cas.version}</version>
         </dependency>
     </dependencies>
 
